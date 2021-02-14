@@ -12,7 +12,7 @@ import com.gym.app.entities.Video;
 import com.gym.app.repositories.GymclassRepository;
 import com.gym.app.repositories.VideoRepository;
 
-@Component
+
 public class DbSeeder implements CommandLineRunner
 {
 	@Autowired
