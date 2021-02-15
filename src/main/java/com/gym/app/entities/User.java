@@ -35,7 +35,7 @@ public class User
 		this.cin = cin;
 		this.password = password;
 		this.role_id = role_id;
-		gymclasses = gymclasses;
+		this.gymclasses = gymclasses;
 	}
 	public String getId() 
 	{
@@ -98,7 +98,7 @@ public class User
 	}
 	public void setGymclasses(List<String> gymclasses) 
 	{
-		gymclasses = gymclasses;
+		this.gymclasses = gymclasses;
 	}
 	
 	
