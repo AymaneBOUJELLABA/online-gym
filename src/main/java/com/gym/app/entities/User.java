@@ -17,7 +17,7 @@ public class User
 	private String cin;
 	private String password;
 	
-	private String role_id;
+	private String role_type;
 	private List<String> gymclasses;
 	
 	protected User () 
@@ -26,7 +26,7 @@ public class User
 		this.gymclasses = new ArrayList<String>();
 		
 	}
-	public User(String name, String email, String dateOfBirth, String cin, String password, String role_id,
+	public User(String name, String email, String dateOfBirth, String cin, String password, String role_type,
 			List<String> gymclasses) {
 		super();
 		this.name = name;
@@ -34,7 +34,7 @@ public class User
 		DateOfBirth = dateOfBirth;
 		this.cin = cin;
 		this.password = password;
-		this.role_id = role_id;
+		this.role_type = role_type;
 		this.gymclasses = gymclasses;
 	}
 	public String getId() 
@@ -84,13 +84,13 @@ public class User
 	{
 		this.password = password;
 	}
-	public String getRole_id() 
+	public String getRole_type() 
 	{
-		return role_id;
+		return role_type;
 	}
-	public void setRole_id(String role_id) 
+	public void setRole_type(String role_type) 
 	{
-		this.role_id = role_id;
+		this.role_type = role_type;
 	}
 	public List<String> getGymclasses() 
 	{

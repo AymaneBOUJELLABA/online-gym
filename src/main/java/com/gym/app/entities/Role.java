@@ -12,16 +12,16 @@ public class Role
 	@Id
 	private String id;
 	private String name;
-	private List<User> users;
+	private List<String> users;
 	
 	protected Role() 
 	{	
 		super();
-		this.users = new ArrayList<User>();
+		this.users = new ArrayList<String>();
 		
 	}
 	
-	public Role(String name, List<User> users)
+	public Role(String name, List<String> users)
 	{
 		super();
 		this.name = name;
@@ -43,11 +43,11 @@ public class Role
 	{
 		this.name = name;
 	}
-	public List<User> getUsers() 
+	public List<String> getUsers() 
 	{
 		return users;
 	}
-	public void setUsers(List<User> users) 
+	public void setUsers(List<String> users) 
 	{
 		this.users = users;
 	}
