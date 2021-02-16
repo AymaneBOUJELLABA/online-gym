@@ -1,6 +1,7 @@
 package com.gym.app.entities;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -25,7 +26,7 @@ public class User
 	private String cin;
 	
 	@DBRef
-	private Set<Role> roles;
+	private Set<Role> roles = new HashSet<>();
 	private List<String> gymclasses;
 	
 	public User()
