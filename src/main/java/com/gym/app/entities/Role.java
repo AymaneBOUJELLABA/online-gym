@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.IndexDirection;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection ="Role")
@@ -11,46 +13,47 @@ public class Role
 {
 	@Id
 	private String id;
-	private String name;
-	private List<String> users;
+	
+	@Indexed(unique=true, direction = IndexDirection.DESCENDING, dropDups= true)
+	private String role;
+	
+	
 	
 	protected Role() 
 	{	
-		super();
-		this.users = new ArrayList<String>();
-		
+		super();	
 	}
 	
-	public Role(String name, List<String> users)
-	{
+	
+
+	public Role(String id, String role) {
 		super();
-		this.name = name;
-		this.users = users;
+		this.id = id;
+		this.role = role;
 	}
-	public String getId() 
+
+
+
+	public String getId()
 	{
 		return id;
 	}
+
 	public void setId(String id) 
 	{
 		this.id = id;
 	}
-	public String getName() 
+
+	public String getRole() 
 	{
-		return name;
+		return role;
 	}
-	public void setName(String name) 
+
+	public void setRole(String role)
 	{
-		this.name = name;
+		this.role = role;
 	}
-	public List<String> getUsers() 
-	{
-		return users;
-	}
-	public void setUsers(List<String> users) 
-	{
-		this.users = users;
-	}
+	
 	
 	
 }

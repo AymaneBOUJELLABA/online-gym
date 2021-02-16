@@ -11,4 +11,5 @@ import com.gym.app.entities.Role;
 public interface RoleRepository extends MongoRepository<Role, String>
 {
 	Optional<Role> findById(String id);
+	Role findByRole(String role);
 }
