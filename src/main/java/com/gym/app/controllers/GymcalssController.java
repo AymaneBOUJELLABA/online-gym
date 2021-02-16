@@ -17,7 +17,7 @@ import com.gym.app.entities.Gymclass;
 import com.gym.app.repositories.GymclassRepository;
 
 @RestController
-@RequestMapping("/gyms")
+@RequestMapping("/api/gyms")
  public class GymcalssController
 {
 	@Autowired

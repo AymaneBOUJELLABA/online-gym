@@ -1,5 +1,6 @@
 package com.gym.app.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -26,7 +27,7 @@ public class UserService implements UserDetailsService
 		
 		if(user != null)
 		{
-			return buildUserForAuthentication(user, null);
+			return buildUserForAuthentication(user, new ArrayList<>());
 		}else 
 		{
 			throw new UsernameNotFoundException("username not found");

@@ -42,11 +42,6 @@ public class DbSeeder implements CommandLineRunner
 	{
 		//delete all
 		gymrepo.deleteAll();
-		rolerepo.deleteAll();
-		userrepo.deleteAll();
-		trainerrepo.deleteAll();
-		adminrepo.deleteAll();
-		
 		//create a gym
 		Gymclass gym1 = new Gymclass("yoga", "a fake id",new ArrayList<String>());
 		//insert the gym
